@@ -101,14 +101,14 @@ echo "Building to $DEST"
 
 # Create the required source and build directories
 SOURCE_DIR="${DEST%/}/source/"
-RNO_BUILD_DIR="${DEST%/}/RNO_build/"
+RNOG_BUILD_DIR="${DEST%/}/RNOG_build/"
 DEPS_BUILD_DIR="${DEST%/}/misc_build/"
 ROOT_BUILD_DIR="${DEST%/}/root_build/"
 if [ ! -d "$SOURCE_DIR" ]; then
 	mkdir "$SOURCE_DIR"
 fi
-if [ ! -d "$RNO_BUILD_DIR" ]; then
-	mkdir "$RNO_BUILD_DIR"
+if [ ! -d "$RNOG_BUILD_DIR" ]; then
+	mkdir "$RNOG_BUILD_DIR"
 fi
 if [ ! -d "$DEPS_BUILD_DIR" ]; then
 	mkdir "$DEPS_BUILD_DIR"
@@ -119,11 +119,11 @@ fi
 
 # Run build scripts from this script's directory
 cd "$SCRIPT_DIR"
-./build_CMake.sh --source "$SOURCE_DIR" --build "$DEPS_BUILD_DIR" $MAKE_ARG $SKIP_ARG $CLEAN_SOURCE || error 101 "Failed CMake build"
-./build_FFTW.sh --source "$SOURCE_DIR" --build "$DEPS_BUILD_DIR" $MAKE_ARG $SKIP_ARG $CLEAN_SOURCE || error 102 "Failed FFTW build"
-./build_GSL.sh --source "$SOURCE_DIR" --build "$DEPS_BUILD_DIR" $MAKE_ARG $SKIP_ARG $CLEAN_SOURCE || error 103 "Failed GSL build"
+# ./build_CMake.sh --source "$SOURCE_DIR" --build "$DEPS_BUILD_DIR" $MAKE_ARG $SKIP_ARG $CLEAN_SOURCE || error 101 "Failed CMake build"
+# ./build_FFTW.sh --source "$SOURCE_DIR" --build "$DEPS_BUILD_DIR" $MAKE_ARG $SKIP_ARG $CLEAN_SOURCE || error 102 "Failed FFTW build"
+# ./build_GSL.sh --source "$SOURCE_DIR" --build "$DEPS_BUILD_DIR" $MAKE_ARG $SKIP_ARG $CLEAN_SOURCE || error 103 "Failed GSL build"
 ./build_python3.sh --source "$SOURCE_DIR" --build "$DEPS_BUILD_DIR" $MAKE_ARG $SKIP_ARG $CLEAN_SOURCE || error 105 "Failed python3 build"
-./build_boost.sh --source "$SOURCE_DIR" --build "$DEPS_BUILD_DIR" $MAKE_ARG $SKIP_ARG $CLEAN_SOURCE || error 106 "Failed boost build"
+# ./build_boost.sh --source "$SOURCE_DIR" --build "$DEPS_BUILD_DIR" $MAKE_ARG $SKIP_ARG $CLEAN_SOURCE || error 106 "Failed boost build"
 # ./build_ROOT6.sh --source "$SOURCE_DIR" --build "$ROOT_BUILD_DIR" --deps "$DEPS_BUILD_DIR" $MAKE_ARG $SKIP_ARG $CLEAN_SOURCE || error 107 "Failed ROOT6 build"
 # ./build_libRootFftwWrapper.sh --source "$SOURCE_DIR" --build "$DEPS_BUILD_DIR" --root "$ROOT_BUILD_DIR" --deps "$DEPS_BUILD_DIR" $MAKE_ARG $SKIP_ARG || error 108 "Failed libRootFftwWrapper build"
 

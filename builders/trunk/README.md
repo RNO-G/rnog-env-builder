@@ -12,5 +12,5 @@ Build scripts for the trunk version of the RNO-G analysis software.
 | GSL                | 2.7              |
 | Boost              | 1.83.0           |
 | Python             | 3.11.5           |
-| ROOT               | 6.22.06          |
+| ROOT               | 6.28.06          |
 | mattak             | master           |
