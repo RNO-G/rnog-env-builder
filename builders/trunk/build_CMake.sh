@@ -96,7 +96,7 @@ fi
 if [ $SKIP_BUILD = false ]; then
 	echo "Compiling $PACKAGE_NAME"
 	cd "$PACKAGE_DIR_NAME"
-	./configure --prefix="$BUILD_DIR" -- -DCMAKE_USE_OPENSSL=OFF || exit 31
+	./configure --prefix="$BUILD_DIR" || exit 31
 	echo "Installing $PACKAGE_NAME"
 	make "$MAKE_ARG" || exit 32
 	make install "$MAKE_ARG" || exit 33
