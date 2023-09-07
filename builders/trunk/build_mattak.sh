@@ -1,5 +1,5 @@
 #!/bin/sh
-# Build script for libnuphase
+# Build script for mattak
 
 # Set script parameters
 PACKAGE_NAME="mattak"
