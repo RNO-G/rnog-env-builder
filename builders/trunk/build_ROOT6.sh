@@ -119,7 +119,6 @@ if [ $SKIP_BUILD = false ]; then
 	echo "Compiling $PACKAGE_NAME"
 	cd "$BUILD_DIR"
 	cmake -Dminuit2:bool=true -DPYTHON_EXECUTABLE="${ARA_DEPS_INSTALL_DIR}/bin/python" "${SOURCE_DIR%/}/$PACKAGE_DIR_NAME" || exit 31
-	# cmake -Dminuit2:bool=true -DPYTHON_EXECUTABLE="${ARA_DEPS_INSTALL_DIR}/miniconda/bin/python" "${SOURCE_DIR%/}/$PACKAGE_DIR_NAME" || exit 31
 	echo "Installing $PACKAGE_NAME"
 	make "$MAKE_ARG" || exit 32
 fi
