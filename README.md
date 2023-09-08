@@ -21,7 +21,7 @@ The python installation also includes many of the
 
 # Structure
 
-Build scripts are stored in subdirectories of the `builders`` directory. Setup scripts and any other static files are stored in subdirectories of the `builds` directory. See the README.md files in these subdirectories for more information. (And apologies for the confusion
+Build scripts are stored in subdirectories of the `builders` directory. Setup scripts and any other static files are stored in subdirectories of the `builds` directory. See the README.md files in these subdirectories for more information. (And apologies for the confusion
 between builders and builds...).
 
 # Motivation
