@@ -3,7 +3,7 @@
 
 # Set script parameters
 PACKAGE_NAME="boost"
-DOWNLOAD_LINK="https://sourceforge.net/projects/boost/files/boost/1.83.0/boost_1_83_0.tar.gz"
+DOWNLOAD_LINK="https://boostorg.jfrog.io/artifactory/main/release/1.83.0/source/boost_1_83_0.tar.gz"
 PACKAGE_DIR_NAME="boost_1_83_0"
 
 
