@@ -56,10 +56,10 @@ while [ "$1" != "" ]; do
         --skip_build )
             SKIP_BUILD=true
         ;;
-		--make_arg )
-			shift
-			MAKE_ARG="$1"
-		;;
+        --make_arg )
+            shift
+            MAKE_ARG="$1"
+        ;;
         --clean_source)
             CLEAN_SOURCE=true
         ;;
