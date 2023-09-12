@@ -26,10 +26,10 @@ export BOOST_ROOT="$RNO_G_DEPS_INSTALL_DIR/include"
 
 export CMAKE_PREFIX_PATH="$RNO_G_DEPS_INSTALL_DIR"
 
-# add something about  mattak later
 
+# Need to update this later
 # # Warn about incompatible gcc versions
-# export RNO_G_GCC_VERSION=$(strings -a "${RNO_G_SETUP_DIR%/}/source/AraSim/AraSim" | grep "GCC: (" | head -1 | cut -d " " -f 3)
+# export RNO_G_GCC_VERSION=$(strings -a "${RNO_G_INSTALL_DIR%/}/bin/rno-g-combine" | grep "GCC: (" | head -1 | cut -d " " -f 3)
 # export SYS_GCC_VERSION=$($(command -v gcc) --version | head -1 | cut -d " " -f 3)
 # if [ "$RNO_G_GCC_VERSION" = "4.8.5" ]; then
 #     case $SYS_GCC_VERSION in
@@ -51,6 +51,7 @@ export CMAKE_PREFIX_PATH="$RNO_G_DEPS_INSTALL_DIR"
 #         * )
 #             # gcc version is greater than 5.0.0
 #             # (at which point the string ABI changed)
+#             echo $RNO_G_GCC_VERSION
 #             echo "The ARA software was compiled with gcc version $RNO_G_GCC_VERSION."
 #             echo "Your system uses gcc version $SYS_GCC_VERSION, which is likely to cause problems."
 #             echo "If you do any compilation against the ARA software you may need to add the '-D_GLIBCXX_USE_CXX11_ABI=0' flag."
