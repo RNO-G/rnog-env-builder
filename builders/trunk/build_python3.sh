@@ -3,8 +3,8 @@
 
 # Set script parameters
 PACKAGE_NAME="python3"
-DOWNLOAD_LINK="https://www.python.org/ftp/python/3.11.5/Python-3.11.5.tgz"
-PACKAGE_DIR_NAME="py3.11.5"
+DOWNLOAD_LINK="https://www.python.org/ftp/python/3.10.13/Python-3.10.13.tgz"
+PACKAGE_DIR_NAME="py3.10.13"
 
 
 usage() {
@@ -109,11 +109,14 @@ if [ $SKIP_BUILD = false ]; then
     ln -s "$BUILD_DIR/bin/python3" "$BUILD_DIR/bin/python"
     ln -s "$BUILD_DIR/bin/pip3" "$BUILD_DIR/bin/pip"
 
+    # update path so we can find our new pip and python
+    export PATH="$BUILD_DIR/bin:$PATH"
+    export LD_LIBRARY_PATH="$BUILD_DIR/lib:$LD_LIBRARY_PATH"
+
     # upgrade pip first thing
     pip install --upgrade pip
 
     # pip install some needed python packages
-    export LD_LIBRARY_PATH="$BUILD_DIR/lib"
     $BUILD_DIR/bin/pip3 install gnureadline h5py healpy \
      iminuit tables tqdm matplotlib numpy pandas pynverse astropy \
      scipy pybind11 dataclasses uproot awkward \
