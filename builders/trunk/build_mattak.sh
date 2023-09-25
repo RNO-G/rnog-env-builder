@@ -136,7 +136,9 @@ if [ $SKIP_BUILD = false ]; then
     echo "Compiling $PACKAGE_NAME"
     cd "$PACKAGE_DIR_NAME"
 
-    cmake --version
+    # make sure it builds with librno-g support
+    # (there is almost certainly a more elegant way to set this flag)
+    sed -i 's:option (LIBRNO_G_SUPPORT "Support for reading / converting from raw files." OFF):option (LIBRNO_G_SUPPORT "Support for reading / converting from raw files." ON):' CMakeLists.txt
 
     # compile
     make || exit 32
