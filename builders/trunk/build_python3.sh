@@ -95,7 +95,7 @@ fi
 if [ $SKIP_BUILD = false ]; then
     echo "Compiling $PACKAGE_NAME"
     cd "$PACKAGE_DIR_NAME"
-    ./configure --enable-shared --with-pydebug --prefix="$BUILD_DIR" || exit 31
+    ./configure --enable-shared --prefix="$BUILD_DIR" || exit 31
     echo "Installing $PACKAGE_NAME"
     if [ -z "$MAKE_ARG" ]
     then
