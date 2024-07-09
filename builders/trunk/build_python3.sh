@@ -118,7 +118,7 @@ if [ $SKIP_BUILD = false ]; then
 
     # pip install some needed python packages
     $BUILD_DIR/bin/pip3 install gnureadline h5py healpy \
-     iminuit tables tqdm matplotlib numpy pandas pynverse astropy \
+     iminuit tables tqdm matplotlib numpy==1.26.4 pandas pynverse astropy \
      scipy pybind11 dataclasses uproot awkward \
      tinydb tinydb-serialization aenum pymongo dash plotly \
      toml peakutils configparser filelock || exit 34
