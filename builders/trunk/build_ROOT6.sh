@@ -3,8 +3,8 @@
 
 # Set script parameters
 PACKAGE_NAME="ROOT6"
-DOWNLOAD_LINK="https://root.cern/download/root_v6.28.06.source.tar.gz"
-PACKAGE_DIR_NAME="root-6.28.06"
+DOWNLOAD_LINK="https://root.cern/download/root_v6.32.02.source.tar.gz"
+PACKAGE_DIR_NAME="root-6.32.02"
 
 
 usage() {

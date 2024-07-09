@@ -10,12 +10,11 @@ This version is intended to represent the latest versions of all RNO-G software.
 
 | Package            | Version/Commit   |
 | ------------------ | ---------------- |
-| CMake              | 3.27.4           |
+| CMake              | 3.30.0           |
 | FFTW               | 3.3.10           |
-| GSL                | 2.7              |
-| Boost              | 1.83.0           |
-| Python             | 3.11.5           |
-| ROOT               | 6.28.06          |
+| GSL                | 2.8              |
+| Python             | 3.12.4           |
+| ROOT               | 6.32.02          |
 | mattak             | master           |
 
 ## Contents

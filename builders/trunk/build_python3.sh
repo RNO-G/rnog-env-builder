@@ -3,8 +3,8 @@
 
 # Set script parameters
 PACKAGE_NAME="python3"
-DOWNLOAD_LINK="https://www.python.org/ftp/python/3.10.13/Python-3.10.13.tgz"
-PACKAGE_DIR_NAME="py3.10.13"
+DOWNLOAD_LINK="https://www.python.org/ftp/python/3.12.4/Python-3.12.4.tgz"
+PACKAGE_DIR_NAME="py3.12.4"
 
 
 usage() {
