@@ -121,7 +121,7 @@ if [ $SKIP_BUILD = false ]; then
      iminuit tables tqdm matplotlib numpy pandas pynverse astropy \
      scipy pybind11 dataclasses uproot awkward \
      tinydb tinydb-serialization aenum pymongo dash plotly \
-     toml peakutils configparser || exit 34
+     toml peakutils configparser filelock || exit 34
 fi
 
 # Clean up source directory if requested
