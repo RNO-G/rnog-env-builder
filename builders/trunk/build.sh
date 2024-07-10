@@ -126,7 +126,7 @@ cd "$SCRIPT_DIR"
 ./build_ROOT6.sh --source "$SOURCE_DIR" --build "$ROOT_BUILD_DIR" --deps "$DEPS_BUILD_DIR" $MAKE_ARG $SKIP_ARG $CLEAN_SOURCE || error 107 "Failed ROOT6 build"
 ./build_libRootFftwWrapper.sh --source "$SOURCE_DIR" --build "$DEPS_BUILD_DIR" --root "$ROOT_BUILD_DIR" --deps "$DEPS_BUILD_DIR" $MAKE_ARG $SKIP_ARG || error 108 "Failed libRootFftwWrapper build"
 ./build_librno-g.sh --source "$SOURCE_DIR" --build "$RNO_G_BUILD_DIR" --root "$ROOT_BUILD_DIR" --deps "$DEPS_BUILD_DIR" $MAKE_ARG $SKIP_ARG || error 109 "Failed librnog-g build"
-./build_mattak.sh --source "$SOURCE_DIR" --build "$RNO_G_BUILD_DIR" --root "$ROOT_BUILD_DIR" --deps "$DEPS_BUILD_DIR" $MAKE_ARG $SKIP_ARG || error 110 "Failed libRootFftwWrapper build"
+./build_mattak.sh --source "$SOURCE_DIR" --build "$RNO_G_BUILD_DIR" --root "$ROOT_BUILD_DIR" --deps "$DEPS_BUILD_DIR" $MAKE_ARG $SKIP_ARG || error 110 "Failed mattak build"
 
 # Hardcode destination path in the setup script
 if [ $SKIP_BUILD = false ]; then
