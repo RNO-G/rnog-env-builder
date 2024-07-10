@@ -7,13 +7,13 @@ It also install mattak itself.
 See [here](https://github.com/RNO-G/mattak/blob/main/doc/ReadingData.md) and [here](https://github.com/RNO-G/mattak/blob/main/INSTALL.md) for more information about compiling mattak and its dependencies.
 
 It installs a series of packages, including:
-* Boost
 * CMake
 * FFTW
 * GSL
 * python3
 * ROOT 6
 * libRootFftwWrapper
+* librno-g
 * mattak
 
 The python installation also includes many of the

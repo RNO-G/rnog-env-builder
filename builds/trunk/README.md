@@ -14,7 +14,7 @@ This version is intended to represent the latest versions of all RNO-G software.
 | FFTW               | 3.3.10           |
 | GSL                | 2.8              |
 | Python             | 3.12.4           |
-| ROOT               | 6.32.02          |
+| ROOT               | 6.28.12          |
 | mattak             | master           |
 
 ## Contents
