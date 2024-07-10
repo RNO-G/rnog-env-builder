@@ -3,8 +3,8 @@
 
 # Set script parameters
 PACKAGE_NAME="ROOT6"
-DOWNLOAD_LINK="https://root.cern/download/root_v6.32.02.source.tar.gz"
-PACKAGE_DIR_NAME="root-6.32.02"
+DOWNLOAD_LINK="https://root.cern/download/root_v6.28.12.source.tar.gz"
+PACKAGE_DIR_NAME="root-6.28.12"
 
 
 usage() {
@@ -107,18 +107,18 @@ fi
 
 # Set required environment variables
 if [ $SKIP_BUILD = false ]; then
-    export ARA_DEPS_INSTALL_DIR="${DEPS_BUILD_DIR%/}"
-    export LD_LIBRARY_PATH="$ARA_DEPS_INSTALL_DIR/lib:$LD_LIBRARY_PATH"
-    export DYLD_LIBRARY_PATH="$ARA_DEPS_INSTALL_DIR/lib:$DYLD_LIBRARY_PATH"
-    export PATH="$ARA_DEPS_INSTALL_DIR/bin:$PATH"
-    export CMAKE_PREFIX_PATH="$ARA_DEPS_INSTALL_DIR"
+    export RNO_G_DEPS_INSTALL_DIR="${DEPS_BUILD_DIR%/}"
+    export LD_LIBRARY_PATH="$RNO_G_DEPS_INSTALL_DIR/lib:$LD_LIBRARY_PATH"
+    export DYLD_LIBRARY_PATH="$RNO_G_DEPS_INSTALL_DIR/lib:$DYLD_LIBRARY_PATH"
+    export PATH="$RNO_G_DEPS_INSTALL_DIR/bin:$PATH"
+    export CMAKE_PREFIX_PATH="$RNO_G_DEPS_INSTALL_DIR"
 fi
 
 # Run package installation
 if [ $SKIP_BUILD = false ]; then
     echo "Compiling $PACKAGE_NAME"
     cd "$BUILD_DIR"
-    cmake -DPYTHON_EXECUTABLE="${ARA_DEPS_INSTALL_DIR}/bin/python" "${SOURCE_DIR%/}/$PACKAGE_DIR_NAME" || exit 31
+    cmake -DPYTHON_EXECUTABLE="${RNO_G_DEPS_INSTALL_DIR}/bin/python" "${SOURCE_DIR%/}/$PACKAGE_DIR_NAME" || exit 31
     echo "Installing $PACKAGE_NAME"
     make "$MAKE_ARG" || exit 32
 fi
